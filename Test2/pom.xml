@@ -50,10 +50,11 @@
         <version>5.1.4</version>
         <configuration>
             <instructions>
-                <Bundle-Name>Test2</Bundle-Name>
+				<Bundle-Name>${artifactId}</Bundle-Name>
 				<Bundle-SymbolicName>${symbolic.name}</Bundle-SymbolicName>
                 <Import-Package>com.ibm.cics.server</Import-Package>
-                <Private-Package>Teste2</Private-Package>
+				<Private-Package>${groupId}</Private-Package>
+				<CICS-MainClass>${symbolic.name}</CICS-MainClass>
             </instructions>
         </configuration>
         <extensions>true</extensions>

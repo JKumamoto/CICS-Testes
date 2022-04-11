@@ -2,7 +2,7 @@
 	<cicsdefinitionprogram xmlns="http://www.ibm.com/xmlns/prod/CICS/smw2int"
 		cedf="YES" concurrency="REQUIRED" datalocation="ANY"
 		description="Teste" dynamic="NO" execkey="CICS"
-		hotpool="YES" jvm="YES" jvmclass="test2"
-		jvmprofile="DFHOSGI" jvmserver="DFHOSGI"
-		name="CI1TESTE2" resident="YES" status="ENABLED"/>
+		hotpool="NO" jvm="YES" jvmclass="Teste2.test2"
+		jvmserver="DFHOSGI" api="CICSAPI"
+		name="TESTE2" resident="YES" status="ENABLED"/>
 
