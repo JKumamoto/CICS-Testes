@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<manifest xmlns="http://www.ibm.com/xmlns/prod/cics/bundle" bundleMajorVer="1" bundleMicroVer="0" bundleMinorVer="0" bundleRelease="0" bundleVersion="1" id="Test2_Bundle">
+  <meta_directives>
+    <timestamp>2022-04-11T14:30:38.867Z</timestamp>
+  </meta_directives>
+  <define name="test2-1.0.0" path="test2-1.0.0.osgibundle" type="http://www.ibm.com/xmlns/prod/cics/bundle/OSGIBUNDLE"/>
+  <define name="CI1TESTE2" path="CI1TESTE2.program" type="http://www.ibm.com/xmlns/prod/cics/bundle/PROGRAM"/>
+</manifest>

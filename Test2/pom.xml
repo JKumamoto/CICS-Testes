@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>Teste2</groupId>
+    <artifactId>test2</artifactId>
+	<packaging>bundle</packaging>
+    <version>1.0.0</version>
+
+	<properties>
+		<maven.compiler.source>1.8</maven.compiler.source>
+		<maven.compiler.target>1.8</maven.compiler.target>
+        <symbolic.name>${pom.groupId}.${pom.artifactId}</symbolic.name>
+	</properties>
+
+	<!--
+	<build>
+	  <plugins>
+		<plugin>
+		  <groupId>com.ibm.cics</groupId>
+		  <artifactId>cics-bundle-maven-plugin</artifactId>
+		  <version>1.0.3</version>
+		  <extensions>true</extensions>
+		  <configuration>
+			  <defaultjvmserver>DFHOSGI</defaultjvmserver>
+		  </configuration>
+		</plugin>
+	  </plugins>
+	</build>
+
+    <properties>
+		<maven.compiler.source>1.8</maven.compiler.source>
+		<maven.compiler.target>1.8</maven.compiler.target>
+        <export.packages>${export.package}*;version=${unpack.version}</export.packages>
+        <import.packages>*</import.packages>
+		<private.packages>Teste2</private.packages>
+        <symbolic.name>${pom.groupId}.${pom.artifactId}</symbolic.name>
+        <embed-dep>*;scope=provided;type=!pom;inline=true</embed-dep>
+        <unpack-bundle>false</unpack-bundle>
+    </properties>
+	-->
+
+    <build>
+    <plugins>
+     <plugin>
+        <groupId>org.apache.felix</groupId>
+        <artifactId>maven-bundle-plugin</artifactId>
+        <version>5.1.4</version>
+        <configuration>
+            <instructions>
+                <Bundle-Name>Test2</Bundle-Name>
+				<Bundle-SymbolicName>${symbolic.name}</Bundle-SymbolicName>
+                <Import-Package>com.ibm.cics.server</Import-Package>
+                <Private-Package>Teste2</Private-Package>
+            </instructions>
+        </configuration>
+        <extensions>true</extensions>
+     </plugin>
+    </plugins>
+    </build>
+
+    <dependencies>
+        <dependency>
+            <groupId>com.ibm.cics</groupId>
+            <artifactId>com.ibm.cics.server</artifactId>
+            <version>1.700.1-5.4-PH25409</version>
+            <scope>provided</scope>
+        </dependency>
+    </dependencies>
+
+</project>

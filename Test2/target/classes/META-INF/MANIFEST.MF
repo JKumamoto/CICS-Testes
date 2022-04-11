@@ -1,0 +1,12 @@
+Manifest-Version: 1.0
+Bnd-LastModified: 1649687238191
+Build-Jdk-Spec: 1.8
+Bundle-ManifestVersion: 2
+Bundle-Name: Test2
+Bundle-SymbolicName: Teste2.test2
+Bundle-Version: 1.0.0
+Created-By: Apache Maven Bundle Plugin 5.1.4
+Export-Package: Teste2;uses:="com.ibm.cics.server";version="1.0.0"
+Import-Package: com.ibm.cics.server;version="[1.700,2)"
+Require-Capability: osgi.ee;filter:="(&(osgi.ee=JavaSE)(version=1.8))"
+Tool: Bnd-5.1.1.202006162103
