@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>teste.ci1</groupId>
+    <artifactId>link</artifactId>
+	<packaging>bundle</packaging>
+    <version>1.0.0</version>
+
+	<properties>
+		<maven.compiler.source>1.8</maven.compiler.source>
+		<maven.compiler.target>1.8</maven.compiler.target>
+        <symbolic.name>${project.groupId}.${project.artifactId}</symbolic.name>
+	</properties>
+
+    <build>
+    <plugins>
+     <plugin>
+        <groupId>org.apache.felix</groupId>
+        <artifactId>maven-bundle-plugin</artifactId>
+        <version>5.1.4</version>
+        <configuration>
+            <instructions>
+				<Bundle-Name>${project.artifactId}</Bundle-Name>
+				<Bundle-SymbolicName>${symbolic.name}</Bundle-SymbolicName>
+                <Import-Package>com.ibm.cics.server</Import-Package>
+				<Private-Package>${project.groupId}</Private-Package>
+				<CICS-MainClass>${symbolic.name}</CICS-MainClass>
+            </instructions>
+        </configuration>
+        <extensions>true</extensions>
+     </plugin>
+    </plugins>
+    </build>
+
+    <dependencies>
+        <dependency>
+            <groupId>com.ibm.cics</groupId>
+            <artifactId>com.ibm.cics.server</artifactId>
+            <version>1.700.1-5.4-PH25409</version>
+            <scope>provided</scope>
+        </dependency>
+    </dependencies>
+
+</project>

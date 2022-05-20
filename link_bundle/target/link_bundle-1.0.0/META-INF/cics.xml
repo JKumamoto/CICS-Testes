@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<manifest xmlns="http://www.ibm.com/xmlns/prod/cics/bundle" bundleMajorVer="1" bundleMicroVer="0" bundleMinorVer="0" bundleRelease="0" bundleVersion="1" id="link_bundle">
+  <meta_directives>
+    <timestamp>2022-05-20T13:36:29.967Z</timestamp>
+  </meta_directives>
+  <define name="link-1.0.0" path="link-1.0.0.osgibundle" type="http://www.ibm.com/xmlns/prod/cics/bundle/OSGIBUNDLE"/>
+  <define name="LINK01" path="LINK01.program" type="http://www.ibm.com/xmlns/prod/cics/bundle/PROGRAM"/>
+</manifest>
